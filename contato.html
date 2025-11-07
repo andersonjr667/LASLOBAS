@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Mara Guimarães | Psicóloga Junguiana</title>
+    <meta name="description" content="Entre em contato com Mara Guimarães para saber mais sobre atendimentos, workshops e grupos terapêuticos.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <i class="fas fa-moon"></i>
+                    <span>Mulheres em Evolução</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Grupo Terapêutico</a></li>
+                    <li><a href="workshop.html">Workshop</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="hero-title">Entre em <span class="highlight">Contato</span></h1>
+                <p class="hero-subtitle">Estou aqui para acolher suas dúvidas e te ajudar a dar o próximo passo na sua jornada de autoconhecimento</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="contact-options">
+        <div class="container">
+            <h2 class="section-title text-center">Canais de Atendimento</h2>
+            <p class="section-subtitle text-center">Escolha a melhor forma de entrar em contato</p>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Atendimento rápido e direto para esclarecer suas dúvidas</p>
+                    <a href="https://api.whatsapp.com/send?phone=5531999999999&text=Olá! Gostaria de mais informações." class="contact-link">
+                        (31) 99999-9999
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>E-mail</h3>
+                    <p>Para contatos mais detalhados e propostas profissionais</p>
+                    <a href="mailto:contato@maraguimaraes.com.br" class="contact-link">
+                        contato@maraguimaraes.com.br
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p>Conteúdos sobre psicologia junguiana e feminino sagrado</p>
+                    <a href="https://instagram.com/maraguimaraes.psi" target="_blank" class="contact-link">
+                        @maraguimaraes.psi
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-content">
+                <div class="contact-info-text">
+                    <h2>Envie sua mensagem</h2>
+                    <p>Preencha o formulário abaixo e entrarei em contato o mais breve possível. Todos os dados são tratados com confidencialidade.</p>
+                    
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Resposta em até 24 horas</span>
+                        </div>
+                        <div class="contact-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atendimento humanizado</span>
+                        </div>
+                        <div class="contact-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Confidencialidade garantida</span>
+                        </div>
+                    </div>
+                    
+                    <div class="office-hours">
+                        <h4><i class="fas fa-clock"></i> Horário de Atendimento</h4>
+                        <p><strong>Segunda a Sexta:</strong> 9h às 18h</p>
+                        <p><strong>Sábado:</strong> 9h às 13h</p>
+                        <p><em>Atendimentos online com hora marcada</em></p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="nome-contato">
+                                <i class="fas fa-user"></i>
+                                Nome Completo *
+                            </label>
+                            <input type="text" id="nome-contato" name="nome" required placeholder="Digite seu nome completo">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email-contato">
+                                    <i class="fas fa-envelope"></i>
+                                    E-mail *
+                                </label>
+                                <input type="email" id="email-contato" name="email" required placeholder="seu@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telefone-contato">
+                                    <i class="fas fa-phone"></i>
+                                    Telefone *
+                                </label>
+                                <input type="tel" id="telefone-contato" name="telefone" required placeholder="(31) 99999-9999">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="assunto">
+                                <i class="fas fa-tag"></i>
+                                Assunto *
+                            </label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="grupo">Grupo Terapêutico</option>
+                                <option value="workshop">Workshop</option>
+                                <option value="atendimento">Atendimento Individual</option>
+                                <option value="parceria">Parcerias/Palestras</option>
+                                <option value="outro">Outro assunto</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem-contato">
+                                <i class="fas fa-comment-dots"></i>
+                                Mensagem *
+                            </label>
+                            <textarea id="mensagem-contato" name="mensagem" rows="5" required placeholder="Descreva sua dúvida ou interesse..."></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="termos-contato" name="termos" required>
+                            <label for="termos-contato">
+                                Aceito receber respostas por e-mail e WhatsApp conforme a <a href="#" style="color: #d4af37;">Política de Privacidade</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary large">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Enviar Mensagem</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <h2 class="section-title text-center">Conheça meus serviços</h2>
+            <p class="section-subtitle text-center">Diferentes caminhos para sua transformação pessoal</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Grupo Terapêutico</h3>
+                    <p>O Despertar da Mulher Loba - Encontros semanais online para reconexão com sua essência feminina</p>
+                    <a href="index.html" class="service-btn">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Workshop</h3>
+                    <p>Contos de Fadas e a Psique Feminina - 3 horas de imersão nos arquétipos femininos</p>
+                    <a href="workshop.html" class="service-btn">Saiba Mais <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Atendimento Individual</h3>
+                    <p>Terapia individual com abordagem junguiana - Entre em contato para saber mais</p>
+                    <a href="#contactForm" class="service-btn">Entre em Contato <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title text-center">Perguntas Frequentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona o atendimento online?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os atendimentos são realizados por videoconferência através do Zoom, em horários agendados. Você precisa apenas de um dispositivo com internet estável e um ambiente tranquilo para participar.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual a diferença entre o grupo terapêutico e o workshop?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O workshop é um encontro único de 3 horas, ideal para ter uma primeira experiência com a abordagem. Já o grupo terapêutico são encontros semanais contínuos, com acompanhamento profundo e desenvolvimento ao longo do tempo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como faço para me inscrever?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode se inscrever diretamente nas páginas do Grupo Terapêutico ou Workshop, preenchendo o formulário de inscrição. Ou entre em contato por WhatsApp para tirar dúvidas antes de se inscrever.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Preciso ter conhecimento prévio de psicologia junguiana?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Não é necessário nenhum conhecimento prévio. Todos os conceitos são apresentados de forma acessível e vivencial, adequados tanto para iniciantes quanto para quem já tem familiaridade com o tema.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona o pagamento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Após a inscrição, você receberá as instruções de pagamento por e-mail ou WhatsApp. Aceitamos pagamento por PIX, transferência bancária e cartão de crédito (através de link de pagamento).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <i class="fas fa-moon"></i>
+                        <span>Mulheres em Evolução</span>
+                    </div>
+                    <p>Despertando a essência feminina através da psicologia junguiana e saberes ancestrais.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://instagram.com/maraguimaraes.psi" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/maraguimaraes.psi" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=5531999999999" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>(31) 99999-9999</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@maraguimaraes.com.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Atendimento Online</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mara Guimarães - Psicóloga Junguiana. Todos os direitos reservados.</p>
+                <p><small>CRP XX/XXXXX - Psicóloga formada pela Universidade Fumec</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
