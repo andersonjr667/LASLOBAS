@@ -1,382 +1,171 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workshop: Contos de Fadas e a Psique Feminina - Mara Guimarães</title>
-    <meta name="description" content="Participe do workshop exclusivo sobre Contos de Fadas e descubra os arquétipos da psique feminina com Mara Guimarães.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop - Las Lobas | SOULLOBA</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/new/SOULLOBA-SÍMBOLO (1).png">
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-content">
-                <div class="nav-logo">
-                    <i class="fas fa-moon"></i>
-                    <span>Mulheres em Evolução</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Grupo Terapêutico</a></li>
-                    <li><a href="workshop.html" class="active">Workshop</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-                <button class="nav-toggle" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
+  <header class="hero">
+    <img src="images/new/SOULLOBA-LOGOTIPO (1).png" alt="SOULLOBA Logo" class="logo">
+    <button class="mobile-menu-toggle" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Las Lobas</a></li>
+        <li><a href="workshop.html" class="active">Workshop</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
     </nav>
+  </header>
 
-    <!-- Hero Workshop -->
-    <header class="workshop-hero">
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="workshop-hero-content">
-                <span class="workshop-badge">
-                    <i class="fas fa-star"></i>
-                    Workshop Exclusivo
-                </span>
-                
-                <h1 class="workshop-title">
-                    Contos de Fadas e a <span class="highlight">Psique Feminina</span>
-                </h1>
-                
-                <p class="workshop-subtitle">
-                    Uma jornada de 3 horas pelos arquétipos femininos através das histórias ancestrais
-                </p>
-                
-                <div class="workshop-info-cards">
-                    <div class="info-card">
-                        <i class="fas fa-calendar-alt"></i>
-                        <div>
-                            <strong>Data</strong>
-                            <p>25 de Novembro, 2025</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <strong>Horário</strong>
-                            <p>19h às 22h</p>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-laptop"></i>
-                        <div>
-                            <strong>Formato</strong>
-                            <p>Online pelo Zoom</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="#inscricao-workshop" class="btn-primary large">
-                    <i class="fas fa-ticket-alt"></i>
-                    <span>Garantir Minha Vaga</span>
-                </a>
-            </div>
+  <!-- Hero Section -->
+  <section class="main-hero">
+    <img src="images/grupoterapeutico.jpg" alt="Workshop Las Lobas" class="hero-img">
+    <div class="hero-text">
+      <h1>Workshops e Vivências</h1>
+      <p class="hero-subtitle">Experiências transformadoras de reconexão com o feminino</p>
+      <p>Além do Grupo Terapêutico Las Lobas, oferecemos workshops e vivências intensivas para mulheres que buscam autoconhecimento profundo.</p>
+      <a href="#workshops" class="cta">Ver Workshops</a>
+    </div>
+  </section>
+
+  <!-- Workshops Section -->
+  <section class="content-section" id="workshops">
+    <div class="container">
+      <h2>Workshops Disponíveis</h2>
+      <p class="intro-text">Experiências únicas de conexão com a essência feminina através dos arquétipos, contos e saberes ancestrais</p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Círculo de Mulheres</h3>
+          <p>Encontros mensais para partilha, cura e conexão ancestral feminina. Um espaço seguro onde mulheres se apoiam mutuamente em suas jornadas de transformação.</p>
+          <p><strong>Formato:</strong> Presencial e Online</p>
+          <p><strong>Duração:</strong> 3 horas</p>
         </div>
-    </header>
 
-    <!-- O que você vai aprender -->
-    <section class="workshop-content">
-        <div class="container">
-            <h2 class="section-title text-center">O que você vai aprender</h2>
-            <p class="section-subtitle text-center">Um mergulho profundo nos símbolos e arquétipos femininos</p>
-            
-            <div class="workshop-topics">
-                <div class="topic-card">
-                    <div class="topic-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>Os Arquétipos nos Contos</h3>
-                    <p>Descubra os padrões universais presentes nas histórias de fadas e como eles refletem nossa psique.</p>
-                </div>
-                
-                <div class="topic-card">
-                    <div class="topic-icon">
-                        <i class="fas fa-female"></i>
-                    </div>
-                    <h3>A Jornada da Heroína</h3>
-                    <p>Compreenda as fases da transformação feminina através da análise junguiana dos contos.</p>
-                </div>
-                
-                <div class="topic-card">
-                    <div class="topic-icon">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                    <h3>Sombra e Luz Feminina</h3>
-                    <p>Explore os aspectos esquecidos do feminino e como integrá-los em sua vida.</p>
-                </div>
-                
-                <div class="topic-card">
-                    <div class="topic-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Reconexão com sua Essência</h3>
-                    <p>Práticas vivenciais para despertar sua Mulher Selvagem interior.</p>
-                </div>
-            </div>
+        <div class="benefit-card">
+          <h3>Ritual da Loba</h3>
+          <p>Vivência intensiva de autoconhecimento e força interior, conduzida por Mara Guimarães. Um mergulho profundo nos arquétipos da mulher selvagem.</p>
+          <p><strong>Formato:</strong> Presencial</p>
+          <p><strong>Duração:</strong> 1 dia (8 horas)</p>
         </div>
-    </section>
 
-    <!-- Programação -->
-    <section class="workshop-schedule">
-        <div class="container">
-            <h2 class="section-title text-center">Programação do Workshop</h2>
-            
-            <div class="schedule-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-time">19h00 - 19h30</div>
-                    <div class="timeline-content">
-                        <h4>Abertura e Acolhimento</h4>
-                        <p>Apresentação, meditação guiada e criação do espaço sagrado de aprendizado.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-time">19h30 - 20h30</div>
-                    <div class="timeline-content">
-                        <h4>Parte Teórica</h4>
-                        <p>Os Contos de Fadas na visão junguiana: arquétipos, símbolos e a psique feminina.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-time">20h30 - 21h30</div>
-                    <div class="timeline-content">
-                        <h4>Análise de Contos</h4>
-                        <p>Exploração profunda de contos específicos e suas mensagens para a mulher moderna.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-time">21h30 - 22h00</div>
-                    <div class="timeline-content">
-                        <h4>Encerramento e Reflexões</h4>
-                        <p>Compartilhamentos, Q&A e apresentação do Grupo Terapêutico.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="benefit-card">
+          <h3>Contos que Curam</h3>
+          <p>Workshop de um dia sobre a cura através dos contos de fadas sob a perspectiva junguiana. Explore os símbolos e arquétipos que habitam sua psique.</p>
+          <p><strong>Format:</strong> Online</p>
+          <p><strong>Duração:</strong> 4 horas</p>
         </div>
-    </section>
 
-    <!-- Para quem é -->
-    <section class="workshop-audience">
-        <div class="container">
-            <h2 class="section-title text-center">Este workshop é para você que:</h2>
-            
-            <div class="audience-grid">
-                <div class="audience-item">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Busca autoconhecimento através de ferramentas ancestrais</p>
-                </div>
-                <div class="audience-item">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Quer compreender melhor sua jornada feminina</p>
-                </div>
-                <div class="audience-item">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Deseja reconectar com sua intuição e sabedoria interior</p>
-                </div>
-                <div class="audience-item">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Sente curiosidade sobre psicologia junguiana</p>
-                </div>
-                <div class="audience-item">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Está em processo de transformação pessoal</p>
-                </div>
-                <div class="audience-item">
-                    <i class="fas fa-check-circle"></i>
-                    <p>Quer conhecer mais sobre o Grupo Terapêutico</p>
-                </div>
-            </div>
+        <div class="benefit-card">
+          <h3>Reconexão com o Feminino Sagrado</h3>
+          <p>Vivência sobre os ciclos femininos, a relação com o corpo, a intuição e os saberes ancestrais das mulheres.</p>
+          <p><strong>Formato:</strong> Presencial e Online</p>
+          <p><strong>Duração:</strong> 1 dia (6 horas)</p>
         </div>
-    </section>
 
-    <!-- Investimento Workshop -->
-    <section class="workshop-pricing" id="inscricao-workshop">
-        <div class="container">
-            <h2 class="section-title text-center">Investimento</h2>
-            
-            <div class="pricing-cards">
-                <div class="pricing-card-workshop">
-                    <div class="pricing-header">
-                        <h3>Workshop Individual</h3>
-                        <p>Acesso ao workshop de 3 horas</p>
-                    </div>
-                    
-                    <div class="price-value">
-                        <span class="currency">R$</span>
-                        <span class="amount">97</span>
-                    </div>
-                    
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 3 horas de conteúdo ao vivo</li>
-                        <li><i class="fas fa-check"></i> Material complementar em PDF</li>
-                        <li><i class="fas fa-check"></i> Gravação disponível por 7 dias</li>
-                        <li><i class="fas fa-check"></i> Certificado de participação</li>
-                    </ul>
-                    
-                    <a href="#form-workshop" class="btn-primary">
-                        <span>Quero Participar</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="pricing-card-workshop featured">
-                    <div class="featured-badge">
-                        <i class="fas fa-star"></i>
-                        Melhor Escolha
-                    </div>
-                    <div class="pricing-header">
-                        <h3>Workshop + Grupo Terapêutico</h3>
-                        <p>Combo completo de transformação</p>
-                    </div>
-                    
-                    <div class="price-value">
-                        <span class="old-price">R$ 394</span>
-                        <div>
-                            <span class="currency">R$</span>
-                            <span class="amount">347</span>
-                        </div>
-                        <span class="discount">Economia de R$ 47</span>
-                    </div>
-                    
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Tudo do Workshop Individual</li>
-                        <li><i class="fas fa-check"></i> 1º mês do Grupo Terapêutico</li>
-                        <li><i class="fas fa-check"></i> Encontros semanais por 4 semanas</li>
-                        <li><i class="fas fa-check"></i> Acompanhamento personalizado</li>
-                        <li><i class="fas fa-check"></i> Comunidade exclusiva</li>
-                    </ul>
-                    
-                    <a href="#form-workshop" class="btn-primary">
-                        <span>Quero o Combo Completo</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="benefit-card">
+          <h3>Sombras do Feminino</h3>
+          <p>Workshop de integração das sombras através dos contos de fadas. Um trabalho profundo de aceitação e transformação das partes rejeitadas.</p>
+          <p><strong>Formato:</strong> Online</p>
+          <p><strong>Duração:</strong> 3 horas</p>
         </div>
-    </section>
 
-    <!-- Formulário de Inscrição Workshop -->
-    <section class="form-section" id="form-workshop">
-        <div class="container">
-            <h2 class="section-title text-center">Garanta sua vaga no Workshop</h2>
-            <p class="section-subtitle text-center">Preencha os dados abaixo e receba o link de acesso</p>
-            
-            <div class="inscription-form-wrapper">
-                <form id="workshopForm" class="inscription-form">
-                    <div class="form-group">
-                        <label for="nome-workshop">
-                            <i class="fas fa-user"></i>
-                            Nome Completo *
-                        </label>
-                        <input type="text" id="nome-workshop" name="nome" required placeholder="Digite seu nome completo">
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email-workshop">
-                                <i class="fas fa-envelope"></i>
-                                E-mail *
-                            </label>
-                            <input type="email" id="email-workshop" name="email" required placeholder="seu@email.com">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="telefone-workshop">
-                                <i class="fas fa-phone"></i>
-                                WhatsApp *
-                            </label>
-                            <input type="tel" id="telefone-workshop" name="telefone" required placeholder="(31) 99999-9999">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="opcao-workshop">
-                            <i class="fas fa-shopping-cart"></i>
-                            Escolha sua opção *
-                        </label>
-                        <select id="opcao-workshop" name="opcao" required>
-                            <option value="">Selecione uma opção</option>
-                            <option value="workshop">Workshop Individual - R$ 97</option>
-                            <option value="combo">Workshop + Grupo Terapêutico - R$ 347</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-checkbox">
-                        <input type="checkbox" id="termos-workshop" name="termos" required>
-                        <label for="termos-workshop">
-                            Aceito receber informações sobre o workshop e confirmo que as informações fornecidas são verdadeiras.
-                        </label>
-                    </div>
-                    
-                    <button type="submit" class="btn-primary large">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Finalizar Inscrição</span>
-                    </button>
-                    
-                    <p class="form-note">Após o envio, você receberá as instruções de pagamento por e-mail e WhatsApp</p>
-                </form>
-            </div>
+        <div class="benefit-card">
+          <h3>Retiro Las Lobas</h3>
+          <p>Imersão completa de fim de semana para mulheres que desejam uma experiência transformadora profunda de reconexão com sua essência selvagem.</p>
+          <p><strong>Formato:</strong> Presencial</p>
+          <p><strong>Duração:</strong> 2 dias</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA para o Grupo -->
-    <section class="cta-group">
-        <div class="container">
-            <div class="cta-group-content">
-                <h2>Quer ir além do workshop?</h2>
-                <p>Conheça nosso Grupo Terapêutico "O Despertar da Mulher Loba" e continue sua jornada de transformação com encontros semanais e acompanhamento contínuo.</p>
-                <a href="index.html" class="btn-secondary">
-                    <span>Conhecer o Grupo Terapêutico</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+  <!-- Porque Participar -->
+  <section class="content-section alt-bg">
+    <div class="container">
+      <h2>Por que participar dos workshops?</h2>
+      
+      <div class="highlight-box">
+        <p>Os workshops são experiências complementares ao trabalho terapêutico contínuo, oferecendo momentos de mergulho intenso em temas específicos do feminino.</p>
+      </div>
+
+      <ul class="learning-list">
+        <li>Experiência prática e vivencial, não apenas teórica</li>
+        <li>Conexão com outras mulheres em jornadas similares</li>
+        <li>Ferramentas concretas para aplicar no dia a dia</li>
+        <li>Espaço seguro para expressar emoções e vulnerabilidades</li>
+        <li>Orientação de uma terapeuta junguiana experiente</li>
+        <li>Trabalho com arquétipos e contos de fadas</li>
+        <li>Integração de corpo, mente e espírito</li>
+        <li>Despertar da intuição e sabedoria interior</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Para Quem São -->
+  <section class="content-section">
+    <div class="container">
+      <h2>Para quem são os workshops?</h2>
+      
+      <ul class="checklist positive">
+        <li>Mulheres que buscam autoconhecimento profundo</li>
+        <li>Quem deseja se reconectar com sua essência feminina</li>
+        <li>Mulheres em transição de vida (separação, luto, mudança de carreira)</li>
+        <li>Quem quer compreender melhor seus padrões emocionais</li>
+        <li>Mulheres que sentem que perderam a conexão consigo mesmas</li>
+        <li>Quem busca um espaço de acolhimento e partilha autêntica</li>
+        <li>Mulheres interessadas em psicologia junguiana e contos de fadas</li>
+        <li>Quem deseja despertar sua força instintiva e criativa</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sobre Mara -->
+  <section class="content-section alt-bg about-mara">
+    <div class="container">
+      <div class="about-content">
+        <img src="images/mara-guimaraes.jpeg" alt="Mara Guimarães" class="mara-photo">
+        <div class="about-text">
+          <h2>Facilitadora: Mara Guimarães</h2>
+          <p>Terapeuta junguiana e mentora de saberes femininos com <strong>18 anos de experiência</strong> e mais de <strong>mil mulheres acompanhadas</strong> em processos de cura emocional e reconexão com o feminino.</p>
+          
+          <p>Psicóloga clínica formada pela Universidade FUMEC, especialista em psicologia analítica junguiana, com formação em contos de fadas e arquétipos do feminino.</p>
+          
+          <p class="emphasis">Cada workshop é conduzido com profundidade, acolhimento e respeito pelo tempo e processo de cada mulher.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <i class="fas fa-moon"></i>
-                        <span>Mulheres em Evolução</span>
-                    </div>
-                    <p>Despertando a essência feminina através da psicologia junguiana e saberes ancestrais.</p>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>Contato</h4>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>(31) 99999-9999</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>contato@maraguimaraes.com.br</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-instagram"></i>
-                        <span>@maraguimaraes.psi</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Mara Guimarães - Psicóloga Junguiana. Todos os direitos reservados.</p>
-                <p><small>CRP XX/XXXXX - Psicóloga formada pela Universidade Fumec</small></p>
-            </div>
-        </div>
-    </footer>
+  <!-- CTA Final -->
+  <section class="content-section cta-section">
+    <div class="container">
+      <h2>Interessada nos workshops?</h2>
+      <p class="intro-text">Entre em contato para saber mais sobre datas, valores e inscrições</p>
+      
+      <div class="final-cta">
+        <a href="contato.html" class="cta-big">Quero Participar</a>
+        <p class="cta-subtitle">Desperte a mulher selvagem que habita em você</p>
+      </div>
 
-    <script src="script.js"></script>
+      <div style="margin-top: 3rem; text-align: center;">
+        <p style="font-size: 1.1rem;">Ou conheça o <strong>Grupo Terapêutico Las Lobas</strong>, nosso programa de 3 meses de jornada profunda através dos contos.</p>
+        <a href="index.html" class="cta" style="margin-top: 1rem;">Ver Grupo Terapêutico</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SOULLOBA - Mara Guimarães. Todos os direitos reservados.</p>
+  </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>

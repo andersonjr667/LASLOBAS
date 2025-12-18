@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: 'Classy Voguish';
-    src: url('Classy Voguish.otf') format('opentype');
+    src: url('fonts/Classy Voguish.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Catalina Village';
-    src: url('catalinavillageregular-aloym.otf') format('opentype');
+    src: url('fonts/catalinavillageregular-aloym.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
