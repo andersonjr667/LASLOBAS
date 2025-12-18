@@ -1,3 +1,21 @@
+# Headers de Segurança
+<IfModule mod_headers.c>
+  # Content Security Policy (CSP)
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' data: https://cdnjs.cloudflare.com; img-src 'self' data:; frame-ancestors 'self'; base-uri 'self'; form-action 'self';"
+  
+  # Cross-Origin-Opener-Policy (COOP)
+  Header set Cross-Origin-Opener-Policy "same-origin"
+  
+  # X-Frame-Options (proteção contra clickjacking)
+  Header always set X-Frame-Options "SAMEORIGIN"
+  
+  # X-Content-Type-Options
+  Header set X-Content-Type-Options "nosniff"
+  
+  # Referrer Policy
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
 # Habilitar compressão GZIP
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json

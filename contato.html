@@ -13,10 +13,30 @@
   <meta property="og:description" content="Tire suas dúvidas e agende sua participação no grupo terapêutico Las Lobas.">
   
   <title>Contato - Las Lobas | SOULLOBA</title>
+  
+  <!-- DNS Prefetch para CDNs externos -->
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Preconnect para CDN do Font Awesome -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  
+  <!-- CSS crítico carregado de forma síncrona -->
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Preload apenas da fonte principal usada no hero (acima da dobra) -->
+  <link rel="preload" href="fonts/Classy_Voguish.otf" as="font" type="font/otf" crossorigin>
+  
+  <!-- Font Awesome carregado de forma assíncrona -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+  
   <link rel="icon" type="image/png" href="images/SOULLOBA-LOGO_SECUNDARIO (1).png">
+  
+  <!-- Polyfill para carregamento assíncrono de CSS -->
+  <script>
+    !function(e){"use strict";var t=function(t,n,r){var o,i=e.document,c=i.createElement("link");if(n)o=n;else{var a=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=a[a.length-1]}var d=i.styleSheets;c.rel="stylesheet",c.href=t,c.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(c,n?o:o.nextSibling)});var f=function(e){for(var t=c.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){f(e)})};return c.addEventListener&&c.addEventListener("load",r),c.onloadcssdefined=f,f(r),c},n="undefined"!=typeof exports?exports:e;n.loadCSS=t}("undefined"!=typeof global?global:this);
+  </script>
 </head>
 <body>
   <header class="main-header">
@@ -38,6 +58,7 @@
     </div>
   </header>
 
+  <main>
   <section class="content-section wallpaper-1">
     <div class="decorative-symbol symbol-5"></div>
     <div class="container">
@@ -106,10 +127,11 @@
       <a href="index.html" class="cta-big">Conhecer o Grupo Las Lobas</a>
     </div>
   </section>
+  </main>
 
   <footer>
     <div class="footer-content">
-      <img src="images/SOULLOBA-LOGO_SECUNDARIO (3).png" alt="SOULLOBA" class="footer-logo" width="140" height="70">
+      <img src="images/SOULLOBA-LOGO_SECUNDARIO (3).png" alt="SOULLOBA" class="footer-logo" width="70" height="70">
       <p>&copy; 2025 SOULLOBA - Mara Guimarães. Todos os direitos reservados.</p>
     </div>
   </footer>
