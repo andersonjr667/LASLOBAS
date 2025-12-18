@@ -32,11 +32,6 @@
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
   
   <link rel="icon" type="image/png" href="images/SOULLOBA-LOGO_SECUNDARIO (1).png">
-  
-  <!-- Polyfill para carregamento assíncrono de CSS -->
-  <script>
-    !function(e){"use strict";var t=function(t,n,r){var o,i=e.document,c=i.createElement("link");if(n)o=n;else{var a=(i.body||i.getElementsByTagName("head")[0]).childNodes;o=a[a.length-1]}var d=i.styleSheets;c.rel="stylesheet",c.href=t,c.media="only x",function e(t){if(i.body)return t();setTimeout(function(){e(t)})}(function(){o.parentNode.insertBefore(c,n?o:o.nextSibling)});var f=function(e){for(var t=c.href,n=d.length;n--;)if(d[n].href===t)return e();setTimeout(function(){f(e)})};return c.addEventListener&&c.addEventListener("load",r),c.onloadcssdefined=f,f(r),c},n="undefined"!=typeof exports?exports:e;n.loadCSS=t}("undefined"!=typeof global?global:this);
-  </script>
 </head>
 <body>
   <header class="main-header">
@@ -203,7 +198,7 @@
 
   <footer>
     <div class="footer-content">
-      <img src="images/SOULLOBA-LOGO_SECUNDARIO (2).png" alt="SOULLOBA" class="footer-logo" width="70" height="70">
+      <img src="images/SOULLOBA-LOGO_SECUNDARIO (2).png" alt="SOULLOBA" class="footer-logo" width="70" height="70" loading="lazy">
       <p>&copy; 2025 SOULLOBA - Mara Guimarães. Todos os direitos reservados.</p>
     </div>
   </footer>

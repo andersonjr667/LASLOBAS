@@ -945,6 +945,13 @@ html {
   animation: float 6s ease-in-out infinite;
 }
 
+@media (max-width: 768px) {
+  .decorative-symbol,
+  .decorative-logo {
+    display: none;
+  }
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -1161,9 +1168,12 @@ footer {
 @media (max-width: 768px) {
   .decorative-symbol,
   .decorative-logo {
-    width: 70px;
-    height: 70px;
-    opacity: 0.06;
+    display: none !important;
+  }
+  
+  * {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
   }
   
   .footer-logo {
