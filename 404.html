@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Página Não Encontrada - Las Lobas | SOULLOBA</title>
+  
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" href="images/SOULLOBA-LOGO_SECUNDARIO (1).png">
+  
+  <style>
+    .error-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, rgba(244, 241, 232, 0.95), rgba(239, 221, 216, 0.95)),
+                  url('images/SOULLOBA-WALLPAPERS (3).jpg') center/cover no-repeat fixed;
+      position: relative;
+    }
+    
+    .error-content {
+      max-width: 600px;
+      background: rgba(252, 248, 245, 0.95);
+      padding: 3rem;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(55, 57, 33, 0.3);
+      position: relative;
+      z-index: 2;
+    }
+    
+    .error-logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 2rem;
+      opacity: 0.8;
+    }
+    
+    .error-code {
+      font-family: var(--font-primary);
+      font-size: 8rem;
+      font-weight: 400;
+      color: #D57C54;
+      line-height: 1;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(55, 57, 33, 0.1);
+    }
+    
+    .error-title {
+      font-family: var(--font-primary);
+      font-size: 2rem;
+      color: #6D6842;
+      margin: 1.5rem 0 1rem;
+      font-weight: 400;
+    }
+    
+    .error-message {
+      font-family: 'Alegreya', var(--font-body);
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #373921;
+      margin: 1.5rem 0 2.5rem;
+      line-height: 1.8;
+    }
+    
+    .error-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .error-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #D57C54 0%, #DDA38C 100%);
+      color: #FFF;
+      text-decoration: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(213, 124, 84, 0.3);
+    }
+    
+    .error-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(213, 124, 84, 0.4);
+      background: linear-gradient(135deg, #DDA38C 0%, #D57C54 100%);
+    }
+    
+    .error-link.secondary {
+      background: transparent;
+      color: #6D6842;
+      border: 2px solid #6D6842;
+      box-shadow: none;
+    }
+    
+    .error-link.secondary:hover {
+      background: rgba(109, 104, 66, 0.1);
+      color: #373921;
+      border-color: #373921;
+    }
+    
+    .error-icon {
+      font-size: 4rem;
+      color: #DDA38C;
+      margin-bottom: 1rem;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @media (max-width: 600px) {
+      .error-code {
+        font-size: 5rem;
+      }
+      
+      .error-title {
+        font-size: 1.6rem;
+      }
+      
+      .error-message {
+        font-size: 1rem;
+      }
+      
+      .error-content {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-content">
+      <img src="images/SOULLOBA-LOGO_SECUNDARIO (1).png" alt="SOULLOBA" class="error-logo">
+      <i class="fas fa-moon error-icon"></i>
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Caminho não encontrado</h2>
+      <p class="error-message">
+        Parece que você se perdeu na floresta... Esta página não existe ou foi movida. 
+        Mas não se preocupe, a Loba que existe em você sempre encontra o caminho de volta.
+      </p>
+      
+      <div class="error-actions">
+        <a href="index.html" class="error-link">
+          <i class="fas fa-home"></i>
+          Voltar para o Início
+        </a>
+        <a href="workshop.html" class="error-link secondary">
+          <i class="fas fa-star"></i>
+          Ver Workshops
+        </a>
+        <a href="contato.html" class="error-link secondary">
+          <i class="fas fa-envelope"></i>
+          Entrar em Contato
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

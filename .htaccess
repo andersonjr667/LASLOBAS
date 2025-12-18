@@ -1,3 +1,6 @@
+# Página de Erro 404 Personalizada
+ErrorDocument 404 /404.html
+
 # Headers de Segurança
 <IfModule mod_headers.c>
   # Content Security Policy (CSP)
