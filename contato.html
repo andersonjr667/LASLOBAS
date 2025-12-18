@@ -18,9 +18,13 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   
-  <!-- CSS crítico carregado de forma síncrona -->
+  <!-- CSS crítico inline para renderização imediata -->
+  <style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Catalina Village','Inter',sans-serif;background:linear-gradient(135deg,#F4F1E8 0%,#EFDDD8 100%);color:#373921;min-height:100vh;line-height:1.6}h1,h2,h3,h4,h5,h6{font-family:'Classy Voguish','Playfair Display',serif;font-weight:400;color:#6D6842;line-height:1.3}.main-header{background:#373921;color:#F4F1E8;padding:1rem 0;position:sticky;top:0;z-index:1000;box-shadow:0 2px 15px rgba(0,0,0,0.2)}</style>
+  
+  <!-- Fontes e CSS completo carregados de forma assíncrona -->
   <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
   
   <!-- Preload recursos críticos -->
   <link rel="preload" href="fonts/Classy_Voguish.otf" as="font" type="font/otf" crossorigin>
