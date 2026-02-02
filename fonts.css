@@ -2,9 +2,11 @@
 
 @font-face {
     font-family: 'Classy Voguish';
-    src: url('fonts/Classy Voguish.otf') format('opentype');
+    src: url('fonts/Classy%20Voguish.otf') format('opentype');
     font-weight: normal;
-    font-style: normal;  font-display: swap;}
+    font-style: normal;  
+    font-display: swap;
+}
 
 @font-face {
     font-family: 'Catalina Village';
@@ -22,9 +24,13 @@
     font-display: swap;
 }
 
-/* Fallback para fontes do sistema */
+/* Importação do Google Fonts para melhor suporte a acentos e caracteres especiais */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Fallback para fontes do sistema com suporte completo a português */
 :root {
     --font-primary: 'Classy Voguish', 'Playfair Display', serif;
-    --font-secondary: 'Catalina Village', 'Inter', sans-serif;
-    --font-body: 'Alegreya', 'Georgia', serif;
+    --font-secondary: 'Montserrat', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Lora', 'Georgia', serif;
+    --font-accent: 'Catalina Village', 'Playfair Display', serif;
 }
