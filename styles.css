@@ -69,7 +69,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1.5vw;
+  padding: 0.3rem 1.5vw;
 }
 
 .header-logo {
@@ -80,7 +80,7 @@ h3 {
 }
 
 .logo {
-  height: 95px;
+  height: 85px;
   transition: all 0.3s ease;
   filter: brightness(1.1);
   object-fit: contain;
@@ -942,7 +942,7 @@ html {
   position: absolute;
   width: 100px;
   height: 100px;
-  opacity: 0.12;
+  opacity: 0.22;
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -963,43 +963,43 @@ html {
 }
 
 .symbol-1 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (1).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 50px;
   right: 5%;
 }
 
 .symbol-2 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (2).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 80px;
   left: 3%;
 }
 
 .symbol-3 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (3).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   bottom: 60px;
   right: 8%;
 }
 
 .symbol-4 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (4).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 100px;
   right: 4%;
 }
 
 .symbol-5 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (5).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 70px;
   left: 5%;
 }
 
 .symbol-6 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (6).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   bottom: 80px;
   left: 4%;
 }
 
 .symbol-7 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (7).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 90px;
   right: 6%;
 }
@@ -1009,7 +1009,7 @@ html {
   position: absolute;
   width: 130px;
   height: 130px;
-  opacity: 0.10;
+  opacity: 0.20;
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -1018,49 +1018,49 @@ html {
 }
 
 .logo-primario-1 {
-  background-image: url('images/SOULLOBA-lOGO_PRIMARIO (1).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 40px;
   left: 3%;
 }
 
 .logo-primario-2 {
-  background-image: url('images/SOULLOBA-lOGO_PRIMARIO (2).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 60px;
   right: 5%;
 }
 
 .logo-primario-3 {
-  background-image: url('images/SOULLOBA-lOGO_PRIMARIO (3).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   bottom: 50px;
   left: 4%;
 }
 
 .logo-secundario-1 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (1).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 80px;
   left: 6%;
 }
 
 .logo-secundario-2 {
-  background-image: url('images/SOULLOBA-LOGO_SECUNDARIO (4).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   bottom: 60px;
   right: 5%;
 }
 
 .logo-primario-4 {
-  background-image: url('images/SOULLOBA-lOGO_PRIMARIO (7).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   bottom: 70px;
   right: 3%;
 }
 
 .logo-primario-5 {
-  background-image: url('images/SOULLOBA-lOGO_PRIMARIO (5).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 50px;
   left: 5%;
 }
 
 .logo-primario-6 {
-  background-image: url('images/SOULLOBA-lOGO_PRIMARIO (6).png');
+  background-image: url('images/SOULLOBA-SÍMBOLO (2).png');
   top: 30px;
   right: 4%;
 }
