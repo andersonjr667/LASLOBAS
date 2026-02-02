@@ -69,17 +69,18 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 3vw;
+  padding: 0.5rem 3vw;
 }
 
 .header-logo {
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
+  flex-direction: row;
+  gap: 0.05rem;
+  align-items: center;
 }
 
 .logo {
-  height: 70px;
+  height: 75px;
   transition: all 0.3s ease;
   filter: brightness(1.1);
   object-fit: contain;
@@ -92,11 +93,13 @@ h3 {
 
 .header-subtitle {
   color: #DDA38C;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  margin-left: 0.2rem;
+  margin-left: 0;
+  margin-top: 0;
+  opacity: 0.9;
 }
 
 .main-nav ul {
@@ -1089,6 +1092,90 @@ html {
   opacity: 1;
   transform: scale(1.15);
   filter: grayscale(0%) brightness(1.1);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background: linear-gradient(135deg, #F9F5F0 0%, #F4EDE7 100%);
+  position: relative;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6D6842;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(255, 252, 248, 0.98) 0%, rgba(252, 248, 245, 0.95) 100%);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(55, 57, 33, 0.15);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(213, 124, 84, 0.2);
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(213, 124, 84, 0.3);
+  border-color: rgba(213, 124, 84, 0.5);
+}
+
+.testimonial-stars {
+  color: #DDA38C;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #373921;
+  margin-bottom: 2rem;
+  font-style: italic;
+  position: relative;
+}
+
+.testimonial-text::before {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(213, 124, 84, 0.2);
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.testimonial-author {
+  border-top: 2px solid rgba(213, 124, 84, 0.3);
+  padding-top: 1.5rem;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #6D6842;
+  margin-bottom: 0.3rem;
+}
+
+.author-info {
+  font-size: 0.95rem;
+  color: #D57C54;
+  font-style: italic;
+  margin: 0;
 }
 
 /* Footer Styling */
