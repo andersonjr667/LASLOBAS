@@ -1,6 +1,24 @@
 // JavaScript para o Site Las Lobas - SOULLOBA
 
+// Controla a visibilidade da página de Workshop
+const SHOW_WORKSHOP_PAGE = window.SHOW_WORKSHOP_PAGE ?? false; // true para mostrar, false para ocultar
+
 document.addEventListener('DOMContentLoaded', function() {
+    if (!SHOW_WORKSHOP_PAGE) {
+        document.querySelectorAll('a[href="workshop.html"], a[href="./workshop.html"]').forEach(link => {
+            const item = link.closest('li');
+            if (item) {
+                item.remove();
+            } else {
+                link.remove();
+            }
+        });
+    }
+
+    if (!SHOW_WORKSHOP_PAGE && window.location.pathname.toLowerCase().includes('workshop.html')) {
+        window.location.href = 'index.html';
+        return;
+    }
     
     // Mobile Menu Toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

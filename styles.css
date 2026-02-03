@@ -123,6 +123,11 @@ h3 {
   background: rgba(252, 248, 245, 0.05);
 }
 
+.hide-workshop a[href="workshop.html"],
+.hide-workshop a[href="./workshop.html"] {
+  display: none !important;
+}
+
 .main-nav a i {
   font-size: 1rem;
 }
