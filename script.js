@@ -1,9 +1,257 @@
+    // Remover duplicidade: já existe 'const testimonialCarousel' no início do script
 // JavaScript para o Site Las Lobas - SOULLOBA
 
 // Controla a visibilidade da página de Workshop
 const SHOW_WORKSHOP_PAGE = window.SHOW_WORKSHOP_PAGE ?? false; // true para mostrar, false para ocultar
 
 document.addEventListener('DOMContentLoaded', function() {
+                // Carrossel de depoimentos: renderiza 3 cards por vez
+                let testimonialCarousel = document.querySelector('.testimonial-carousel');
+                if (testimonialCarousel) {
+                        const cardsWrapper = testimonialCarousel.querySelector('.testimonial-cards-wrapper');
+                        const leftArrow = testimonialCarousel.querySelector('.testimonial-arrow-left');
+                        const rightArrow = testimonialCarousel.querySelector('.testimonial-arrow-right');
+                        const dotsContainer = testimonialCarousel.querySelector('.testimonial-dots');
+                        const testimonialsData = [
+                            {
+                                nome: 'Fernanda Sampaio',
+                                texto: 'O conto que mais me marcou foi o do Terno de Sz Szabó, trazendo o insight de que eu não preciso me moldar para caber ou ser aceita. Esse entendimento me trouxe clareza sobre a necessidade de exercitar uma postura mais verdadeira comigo mesma.',
+                                foto: '',
+                            },
+                            {
+                                nome: 'Silvana Ribeiro',
+                                texto: 'O trabalho com os contos, símbolos e arquétipos me surpreendeu profundamente. Eu não tinha expectativas, e me vi refletida neles, aprendendo a me observar e a me inspirar. A forma como a Mara conduz esse trabalho é poética, leve e encantadora.',
+                                foto: '',
+                            },
+                            {
+                                nome: 'Ellen Martins',
+                                texto: 'O trabalho com os contos, símbolos e arquétipos foi essencial para me ajudar a identificar, acolher e cuidar do que precisava ser curado em mim. A forma como os encontros são conduzidos cria uma conexão profunda, é como se estivéssemos dentro do conto, vivendo a experiência de forma muito real.',
+                                foto: '',
+                            },
+                            {
+                                nome: 'Patrícia Santos',
+                                texto: 'A principal virada de chave foi o trabalho da intuição através dos contos. Esse contato me trouxe a oportunidade de pausar, me ouvir e exercitar consultas internas antes de agir. Aprendi a não me apertar, a reduzir a autocobrança e a respeitar mais o meu tempo.',
+                                foto: '',
+                            },
+                            {
+                                nome: 'Ana Maria Lucena',
+                                texto: 'Foi uma experiência quase mágica: depois de cada encontro, as coisas começavam a aparecer e ‘pipocar’ ao longo da semana, me convidando a viver tudo com mais consciência. Se eu tivesse que resumir minha jornada, diria que foi um caminho de aprender sobre mim e aprender a me amar.',
+                                foto: '',
+                            },
+                            {
+                                nome: 'Fernanda Rodrigues',
+                                texto: 'Ao final desse ciclo, celebro principalmente o fato de ter voltado meu olhar para mim. Esse movimento me fez reconhecer o quanto sou forte e potente, trazendo mais confiança para enfrentar desafios. Sinto que as pessoas passaram a me respeitar mais e a maior conquista interna foi, sem dúvida, ter nutrido esse amor-próprio.',
+                                foto: '',
+                            },
+                            {
+                                nome: 'Gabi Faustino',
+                                texto: 'A condução da Mara é diferenciada. Ela cria um espaço seguro, prepara o campo, respeita o tempo interno e nos convida a refletir e respirar. É um trabalho feito com consciência e presença, que desperta profundidade interna e promove verdadeiras transformações.',
+                                foto: '',
+                            },
+                            {
+                                nome: 'Valéria Bontempo',
+                                texto: 'Os momentos que mais me marcaram foram aqueles em que pude me deparar com as minhas próprias sombras. A maior virada de chave foi ter coragem para enxergar o que precisava ser visto, entendendo que adiar esse olhar cobra um preço alto mais adiante.',
+                                foto: '',
+                            },
+                            {
+                                nome: 'Rosana Lima',
+                                texto: 'O conto que mais me marcou foi o da Vasalisa, especialmente o encontro com a minha Baba Yaga interna. A grande virada de chave foi aceitar que, às vezes, preciso ser a \'megera\', colocar limites, dizer não e sustentar a minha verdade, mesmo que isso desagrade os outros.',
+                                foto: '',
+                            },
+                        ];
+                        let currentGroup = 0;
+                        const groupSize = 3;
+                        let testimonialInterval = null;
+
+                        function renderCards() {
+                                cardsWrapper.innerHTML = '';
+                                const start = currentGroup * groupSize;
+                                const cards = testimonialsData.slice(start, start + groupSize);
+                                cards.forEach(dep => {
+                                        const card = document.createElement('div');
+                                        card.className = 'testimonial-card active';
+                                        card.innerHTML = `
+                                            <div class="testimonial-photo-wrapper">
+                                                <img src="${dep.foto}" alt="${dep.nome}" class="testimonial-photo" loading="lazy">
+                                            </div>
+                                            <div class="testimonial-name-wrapper">
+                                                <span class="testimonial-name">${dep.nome}</span>
+                                            </div>
+                                            <div class="testimonial-stars">
+                                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="testimonial-text">${dep.texto}</div>
+                                        `;
+                                        cardsWrapper.appendChild(card);
+                                });
+                        }
+
+                        function renderDots() {
+                                dotsContainer.innerHTML = '';
+                                const totalGroups = Math.ceil(testimonialsData.length / groupSize);
+                                for (let i = 0; i < totalGroups; i++) {
+                                        const dot = document.createElement('button');
+                                        dot.className = 'testimonial-dot' + (i === currentGroup ? ' active' : '');
+                                        dot.setAttribute('aria-label', `Grupo ${i + 1}`);
+                                        dot.addEventListener('click', () => showGroup(i));
+                                        dotsContainer.appendChild(dot);
+                                }
+                        }
+
+                        function showGroup(idx) {
+                                currentGroup = idx;
+                                renderCards();
+                                renderDots();
+                        }
+
+                        function nextGroup() {
+                                const totalGroups = Math.ceil(testimonialsData.length / groupSize);
+                                let next = (currentGroup + 1) % totalGroups;
+                                showGroup(next);
+                        }
+                        function prevGroup() {
+                                const totalGroups = Math.ceil(testimonialsData.length / groupSize);
+                                let prev = (currentGroup - 1 + totalGroups) % totalGroups;
+                                showGroup(prev);
+                        }
+
+                        function startTestimonialCarousel() {
+                                if (testimonialInterval) clearInterval(testimonialInterval);
+                                testimonialInterval = setInterval(nextGroup, 5000);
+                        }
+
+                        leftArrow.addEventListener('click', prevGroup);
+                        rightArrow.addEventListener('click', nextGroup);
+                        testimonialCarousel.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
+                        testimonialCarousel.addEventListener('mouseleave', startTestimonialCarousel);
+
+                        // Inicializa
+                        showGroup(0);
+                        startTestimonialCarousel();
+                }
+            // Removed duplicate declaration of testimonialCarousel
+        if (testimonialCarousel) {
+                const cardsWrapper = testimonialCarousel.querySelector('.testimonial-cards-wrapper');
+                // Lista dos depoimentos
+                const testimonialsData = [
+                    {
+                        nome: 'Fernanda Sampaio',
+                        texto: 'O conto que mais me marcou foi o do Terno de Sz Szabó, trazendo o insight de que eu não preciso me moldar para caber ou ser aceita. Esse entendimento me trouxe clareza sobre a necessidade de exercitar uma postura mais verdadeira comigo mesma.',
+                        foto: '',
+                    },
+                    {
+                        nome: 'Silvana Ribeiro',
+                        texto: 'O trabalho com os contos, símbolos e arquétipos me surpreendeu profundamente. Eu não tinha expectativas, e me vi refletida neles, aprendendo a me observar e a me inspirar. A forma como a Mara conduz esse trabalho é poética, leve e encantadora.',
+                        foto: '',
+                    },
+                    {
+                        nome: 'Ellen Martins',
+                        texto: 'O trabalho com os contos, símbolos e arquétipos foi essencial para me ajudar a identificar, acolher e cuidar do que precisava ser curado em mim. A forma como os encontros são conduzidos cria uma conexão profunda, é como se estivéssemos dentro do conto, vivendo a experiência de forma muito real.',
+                        foto: '',
+                    },
+                    {
+                        nome: 'Patrícia Santos',
+                        texto: 'A principal virada de chave foi o trabalho da intuição através dos contos. Esse contato me trouxe a oportunidade de pausar, me ouvir e exercitar consultas internas antes de agir. Aprendi a não me apertar, a reduzir a autocobrança e a respeitar mais o meu tempo.',
+                        foto: '',
+                    },
+                    {
+                        nome: 'Ana Maria Lucena',
+                        texto: 'Foi uma experiência quase mágica: depois de cada encontro, as coisas começavam a aparecer e ‘pipocar’ ao longo da semana, me convidando a viver tudo com mais consciência. Se eu tivesse que resumir minha jornada, diria que foi um caminho de aprender sobre mim e aprender a me amar.',
+                        foto: '',
+                    },
+                    {
+                        nome: 'Fernanda Rodrigues',
+                        texto: 'Ao final desse ciclo, celebro principalmente o fato de ter voltado meu olhar para mim. Esse movimento me fez reconhecer o quanto sou forte e potente, trazendo mais confiança para enfrentar desafios. Sinto que as pessoas passaram a me respeitar mais e a maior conquista interna foi, sem dúvida, ter nutrido esse amor-próprio.',
+                        foto: '',
+                    },
+                    {
+                        nome: 'Gabi Faustino',
+                        texto: 'A condução da Mara é diferenciada. Ela cria um espaço seguro, prepara o campo, respeita o tempo interno e nos convida a refletir e respirar. É um trabalho feito com consciência e presença, que desperta profundidade interna e promove verdadeiras transformações.',
+                        foto: '',
+                    },
+                    {
+                        nome: 'Valéria Bontempo',
+                        texto: 'Os momentos que mais me marcaram foram aqueles em que pude me deparar com as minhas próprias sombras. A maior virada de chave foi ter coragem para enxergar o que precisava ser visto, entendendo que adiar esse olhar cobra um preço alto mais adiante.',
+                        foto: '',
+                    },
+                    {
+                        nome: 'Rosana Lima',
+                        texto: 'O conto que mais me marcou foi o da Vasalisa, especialmente o encontro com a minha Baba Yaga interna. A grande virada de chave foi aceitar que, às vezes, preciso ser a \'megera\', colocar limites, dizer não e sustentar a minha verdade, mesmo que isso desagrade os outros.',
+                        foto: '',
+                    },
+                ];
+
+                // Renderiza os cards de acordo com o grupo
+                let currentGroup = 0;
+                const groupSize = 3;
+                let testimonialInterval = null;
+
+                function renderCards() {
+                        cardsWrapper.innerHTML = '';
+                        const start = currentGroup * groupSize;
+                        const cards = testimonialsData.slice(start, start + groupSize);
+                        cards.forEach((dep, idx) => {
+                                const card = document.createElement('div');
+                                card.className = 'testimonial-card active';
+                                card.innerHTML = `
+                                    <div class="testimonial-photo-wrapper">
+                                        <img src="${dep.foto}" alt="${dep.nome}" class="testimonial-photo" loading="lazy">
+                                    </div>
+                                    <div class="testimonial-name-wrapper">
+                                        <span class="testimonial-name">${dep.nome}</span>
+                                    </div>
+                                    <div class="testimonial-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="testimonial-text">${dep.texto}</div>
+                                `;
+                                cardsWrapper.appendChild(card);
+                        });
+                }
+
+                function renderDots() {
+                        dotsContainer.innerHTML = '';
+                        const totalGroups = Math.ceil(testimonialsData.length / groupSize);
+                        for (let i = 0; i < totalGroups; i++) {
+                                const dot = document.createElement('button');
+                                dot.className = 'testimonial-dot' + (i === currentGroup ? ' active' : '');
+                                dot.setAttribute('aria-label', `Grupo ${i + 1}`);
+                                dot.addEventListener('click', () => showGroup(i));
+                                dotsContainer.appendChild(dot);
+                        }
+                }
+
+                function showGroup(idx) {
+                        currentGroup = idx;
+                        renderCards();
+                        renderDots();
+                }
+
+                function nextGroup() {
+                        const totalGroups = Math.ceil(testimonialsData.length / groupSize);
+                        let next = (currentGroup + 1) % totalGroups;
+                        showGroup(next);
+                }
+                function prevGroup() {
+                        const totalGroups = Math.ceil(testimonialsData.length / groupSize);
+                        let prev = (currentGroup - 1 + totalGroups) % totalGroups;
+                        showGroup(prev);
+                }
+
+                function startTestimonialCarousel() {
+                        if (testimonialInterval) clearInterval(testimonialInterval);
+                        testimonialInterval = setInterval(nextGroup, 5000);
+                }
+
+                leftArrow.addEventListener('click', prevGroup);
+                rightArrow.addEventListener('click', nextGroup);
+                testimonialCarousel.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
+                testimonialCarousel.addEventListener('mouseleave', startTestimonialCarousel);
+
+                // Inicializa
+                showGroup(0);
+                startTestimonialCarousel();
+                }
     if (!SHOW_WORKSHOP_PAGE) {
         document.querySelectorAll('a[href="workshop.html"], a[href="./workshop.html"]').forEach(link => {
             const item = link.closest('li');
