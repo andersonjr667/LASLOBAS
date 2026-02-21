@@ -142,11 +142,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function startTestimonialCarousel() {
             if (testimonialInterval) clearInterval(testimonialInterval);
-            testimonialInterval = setInterval(nextGroup, 5000);
+            testimonialInterval = setInterval(nextGroup, 6000);
         }
 
-        leftArrow.addEventListener('click', prevGroup);
-        rightArrow.addEventListener('click', nextGroup);
+        leftArrow.addEventListener('click', function() {
+            prevGroup();
+            clearInterval(testimonialInterval);
+            startTestimonialCarousel();
+        });
+        rightArrow.addEventListener('click', function() {
+            nextGroup();
+            clearInterval(testimonialInterval);
+            startTestimonialCarousel();
+        });
         testimonialCarousel.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
         testimonialCarousel.addEventListener('mouseleave', startTestimonialCarousel);
 
