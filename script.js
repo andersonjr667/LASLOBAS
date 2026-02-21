@@ -61,8 +61,29 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
         
         let currentGroup = 0;
-        const groupSize = 3;
+        let groupSize = 3;
         let testimonialInterval = null;
+        
+        // Função para determinar o tamanho do grupo baseado na largura da tela
+        function getGroupSize() {
+            if (window.innerWidth <= 600) {
+                return 1; // Mobile: 1 card por vez
+            } else if (window.innerWidth <= 1024) {
+                return 2; // Tablet: 2 cards
+            }
+            return 3; // Desktop: 3 cards
+        }
+        
+        // Atualizar groupSize quando a janela é redimensionada
+        window.addEventListener('resize', function() {
+            const newGroupSize = getGroupSize();
+            if (newGroupSize !== groupSize) {
+                groupSize = newGroupSize;
+                currentGroup = 0;
+                renderCards();
+                renderDots();
+            }
+        });
 
         function renderCards() {
             cardsWrapper.innerHTML = '';
@@ -130,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         testimonialCarousel.addEventListener('mouseleave', startTestimonialCarousel);
 
         // Inicializa
+        groupSize = getGroupSize();
         renderCards();
         renderDots();
         startTestimonialCarousel();

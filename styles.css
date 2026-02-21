@@ -1297,12 +1297,24 @@ footer {
   
   .testimonial-cards-wrapper {
     gap: 1rem;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0 1rem;
+    justify-content: center;
   }
   
   .testimonial-arrow {
-    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    display: flex;
+  }
+  
+  .testimonial-arrow-left {
+    left: 5px;
+  }
+  
+  .testimonial-arrow-right {
+    right: 5px;
   }
   
   .testimonial-carousel {
