@@ -122,9 +122,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
+        function animateCardsFade() {
+            cardsWrapper.style.opacity = 0;
+            setTimeout(() => {
+                renderCards();
+                cardsWrapper.style.opacity = 1;
+            }, 350);
+        }
+
         function showGroup(idx) {
             currentGroup = idx;
-            renderCards();
+            animateCardsFade();
             renderDots();
         }
 

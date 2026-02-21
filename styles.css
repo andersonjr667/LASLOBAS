@@ -783,7 +783,8 @@ main {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s;
+  opacity: 1;
   margin: 0 auto;
   width: 100%;
 }
@@ -795,9 +796,10 @@ main {
   width: 370px;
   min-width: 370px;
   max-width: 370px;
-  height: auto;
-  min-height: auto;
-  max-height: none;
+  height: 650px;
+  min-height: 650px;
+  max-height: 650px;
+  transition: box-shadow 0.5s, border-color 0.5s, transform 0.5s, opacity 0.5s, height 0.5s;
   padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
