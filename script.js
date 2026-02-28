@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const testimonialsData = [
                 {
                     nome: 'Fernanda Sampaio',
-                    texto: 'O conto que mais me marcou foi o do Terno de Sz Szabó, trazendo o insight de que eu não preciso me moldar para caber ou ser aceita. Esse entendimento me trouxe clareza sobre a necessidade de exercitar uma postura mais verdadeira comigo mesma.',
+                    texto: 'O conto que mais me marcou foi o do Terno de Terno Szabó, trazendo o insight de que eu não preciso me moldar para caber ou ser aceita. Esse entendimento me trouxe clareza sobre a necessidade de exercitar uma postura mais verdadeira comigo mesma.',
                     foto: 'images/testemunials/fernanda_sampaio.jpeg',
                 },
                 {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let currentGroup = 0;
         let groupSize = 3;
-        let testimonialInterval = null;
+        // Note: automatic rotation removed to make navigation manual only.
         
         // Função para determinar o tamanho do grupo baseado na largura da tela
         function getGroupSize() {
@@ -148,29 +148,25 @@ document.addEventListener('DOMContentLoaded', function() {
             showGroup(prev);
         }
 
-        function startTestimonialCarousel() {
-            if (testimonialInterval) clearInterval(testimonialInterval);
-            testimonialInterval = setInterval(nextGroup, 6000);
-        }
+        // Automatic carousel rotation has been disabled to keep transitions manual.
+        // function startTestimonialCarousel() {
+        //     if (testimonialInterval) clearInterval(testimonialInterval);
+        //     testimonialInterval = setInterval(nextGroup, 6000);
+        // }
 
         leftArrow.addEventListener('click', function() {
             prevGroup();
-            clearInterval(testimonialInterval);
-            startTestimonialCarousel();
         });
         rightArrow.addEventListener('click', function() {
             nextGroup();
-            clearInterval(testimonialInterval);
-            startTestimonialCarousel();
         });
-        testimonialCarousel.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
-        testimonialCarousel.addEventListener('mouseleave', startTestimonialCarousel);
+        // Mouse enter/leave listeners removed because carousel no longer auto-rotates.
 
         // Inicializa
         groupSize = getGroupSize();
         renderCards();
         renderDots();
-        startTestimonialCarousel();
+        // startTestimonialCarousel(); // disabled automatic sliding
     }
 
     // Ocultar página de workshop se configurado
